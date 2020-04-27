@@ -9,7 +9,7 @@ import {Person} from '../models/person';
 })
 export class PeopleComponent implements OnInit {
   people: Person[];
-  title = 'Person app';
+  title = 'Tour of People';
   selectedPerson: Person;
 
   constructor(private personService: PersonService) { }

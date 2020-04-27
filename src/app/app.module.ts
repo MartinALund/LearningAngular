@@ -13,13 +13,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule} from '@angular/forms';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { PersonFormComponent } from './person-form/person-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
     TodoComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    PersonFormComponent
   ],
   imports: [
     BrowserModule,
