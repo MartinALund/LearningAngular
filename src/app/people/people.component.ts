@@ -9,6 +9,8 @@ import {Person} from '../models/person';
 })
 export class PeopleComponent implements OnInit {
   people: Person[];
+  title = 'Person app';
+  selectedPerson: Person;
 
   constructor(private personService: PersonService) { }
 
@@ -22,5 +24,7 @@ export class PeopleComponent implements OnInit {
     });
   }
 
-
+  onSelect(person: Person): void {
+    this.selectedPerson = person;
+  }
 }
