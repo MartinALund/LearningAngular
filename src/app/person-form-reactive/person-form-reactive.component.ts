@@ -14,11 +14,11 @@ export class PersonFormReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-        firstName: new FormControl('Default', Validators.compose([
+        firstName: new FormControl('', Validators.compose([
           Validators.pattern('^^[a-zA-Z_]*$'),
           Validators.required,
           ])),
-        lastName: new FormControl('Default', Validators.pattern('^^[a-zA-Z_]*$')),
+        lastName: new FormControl('', Validators.pattern('^^[a-zA-Z_]*$')),
         age: new FormControl('1'),
       }
     );
