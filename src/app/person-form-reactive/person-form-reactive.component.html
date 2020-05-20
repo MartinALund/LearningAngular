@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <label for="firstName">First name</label>
+  <input
+    type="text" id="firstName"
+    required minlength="4"
+    formControlName="firstName">
+
+  <label for="lastName">Last name</label>
+  <input
+    type="text"
+    id="lastName"
+    formControlName="lastName">
+
+  <label for="age">Age</label>
+  <input
+    type="number"
+    id="age"
+    formControlName="age">
+  <button type="submit" [disabled]="!form.valid">Gem</button>
+</form>

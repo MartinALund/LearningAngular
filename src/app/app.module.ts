@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PeopleComponent } from './people/people.component';
@@ -12,9 +11,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonFormComponent } from './person-form/person-form.component';
+import { PersonFormReactiveComponent } from './person-form-reactive/person-form-reactive.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { PersonFormComponent } from './person-form/person-form.component';
     PeopleComponent,
     TodoComponent,
     PersonDetailComponent,
-    PersonFormComponent
+    PersonFormComponent,
+    PersonFormReactiveComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { PersonFormComponent } from './person-form/person-form.component';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
