@@ -1,22 +1,24 @@
-<div class="container">
-  <h1>Person Form</h1>
-  <form>
-    <div class="form-group">
-      <label for="firstName">First name</label>
-      <input type="text" class="form-control" id="firstName" required>
-    </div>
+<form #personForm="ngForm" (ngSubmit)="onSubmit(personForm.value)">
 
-    <div class="form-group">
-      <label for="lastName">Last name</label>
-      <input type="text" class="form-control" id="lastName" required>
-    </div>
+  <label for="firstName">First name</label>
+  <input
+    name="firstName"
+    type="text" id="firstName"
+    required minlength="4"
+    ngModel>
 
-    <div class="form-group">
-      <label for="age">Age</label>
-      <input type="number" class="form-control" id="age">
-    </div>
+  <label for="lastName">Last name</label>
+  <input
+    name="lastName"
+    type="text"
+    id="lastName"
+    ngModel>
 
-    <button type="submit" class="btn btn-success">Submit</button>
-
-  </form>
-</div>
+  <label for="age">Age</label>
+  <input
+    name="age"
+    type="number"
+    id="age"
+    ngModel>
+  <button type="submit">Gem</button>
+</form>

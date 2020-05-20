@@ -11,6 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonFormComponent } from './person-form/person-form.component';
@@ -32,6 +33,7 @@ import { PersonFormComponent } from './person-form/person-form.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
     FormsModule
   ],
   providers: [],

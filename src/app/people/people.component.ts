@@ -27,4 +27,12 @@ export class PeopleComponent implements OnInit {
   onSelect(person: Person): void {
     this.selectedPerson = person;
   }
+
+  onDelete(person: Person): void {
+    this.personService.deletePerson(person).subscribe(() => {
+      console.log('Person deleted');
+    });
+  }
+
+
 }
