@@ -1,6 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
-  <p>
+
+  <div>
     <mat-form-field appearance="outline">
       <mat-label>First name</mat-label>
       <input matInput
@@ -9,9 +10,9 @@
              formControlName="firstName"
              placeholder="Martin">
     </mat-form-field>
-  </p>
+  </div>
 
-  <p>
+  <div>
     <mat-form-field appearance="outline">
       <mat-label>Last name</mat-label>
       <input matInput
@@ -20,20 +21,22 @@
              formControlName="lastName"
              placeholder="Lund">
     </mat-form-field>
-  </p>
+  </div>
 
-  <p>
+  <div>
     <mat-form-field appearance="outline">
-      <mat-label>Age </mat-label>
+      <mat-label>Age</mat-label>
       <input matInput
              type="number"
              id="age"
              formControlName="age"
              placeholder="1">
     </mat-form-field>
-  </p>
+  </div>
 
-  <button type="submit" mat-raised-button [disabled]="!form.valid">Gem</button>
+  <div>
+    <button type="submit" mat-raised-button [disabled]="!form.valid">Gem</button>
+  </div>
 
   <div *ngIf="form.get('firstName').hasError('pattern')">
     <p class="mat-error">First name cannot contain numbers</p>
