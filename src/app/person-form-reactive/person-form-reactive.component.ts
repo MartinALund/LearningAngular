@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {PersonService} from "../services/person.service";
+import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import {PersonService} from '../services/person.service';
 
 @Component({
   selector: 'app-person-form-reactive',
@@ -10,16 +10,16 @@ import {PersonService} from "../services/person.service";
 export class PersonFormReactiveComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private personService: PersonService) { }
+  constructor(private personService: PersonService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-        firstName: new FormControl('', Validators.compose([
+    this.form = this.formBuilder.group({
+        firstName: this.formBuilder.control('', Validators.compose([
           Validators.pattern('^^[a-zA-Z_]*$'),
           Validators.required,
           ])),
-        lastName: new FormControl('', Validators.pattern('^^[a-zA-Z_]*$')),
-        age: new FormControl('1'),
+        lastName: this.formBuilder.control('', Validators.pattern('^^[a-zA-Z_]*$')),
+        age: this.formBuilder.control('1'),
       }
     );
   }
