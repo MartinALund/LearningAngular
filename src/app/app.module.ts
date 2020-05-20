@@ -9,8 +9,8 @@ import { TodoComponent } from './todo/todo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
-import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonFormReactiveComponent } from './person-form-reactive/person-form-reactive.component';
+import {PersonService} from './services/person.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { PersonFormReactiveComponent } from './person-form-reactive/person-form-
     PeopleComponent,
     TodoComponent,
     PersonDetailComponent,
-    PersonFormComponent,
     PersonFormReactiveComponent
   ],
   imports: [
@@ -30,7 +29,8 @@ import { PersonFormReactiveComponent } from './person-form-reactive/person-form-
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PersonService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
