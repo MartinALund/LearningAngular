@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {TodoComponent} from './todo/todo.component';
 import {PeopleComponent} from './people/people.component';
-import {PersonFormComponent} from './person-form/person-form.component';
 import {PersonFormReactiveComponent} from './person-form-reactive/person-form-reactive.component';
 
 const routes: Routes = [
