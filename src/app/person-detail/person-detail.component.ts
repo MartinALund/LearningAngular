@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Person} from '../models/person';
+import {PersonService} from "../services/person.service";
 
 @Component({
   selector: 'app-person-detail',
@@ -9,10 +10,17 @@ import {Person} from '../models/person';
 export class PersonDetailComponent implements OnInit {
 
   @Input() person: Person;
+  @Output() eventEmitter = new EventEmitter<boolean>();
 
-  constructor() { }
+
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
   }
 
+  onDelete(person: Person): void {
+    this.personService.deletePerson(person).subscribe(() => {
+      this.eventEmitter.emit(true);
+    });
+  }
 }

@@ -1,20 +1,5 @@
 <div *ngIf="person">
 
-  <h2>{{person.firstName}} - {{person.lastName}} Details</h2>
-  <div><span>id: </span>{{person.id}}</div>
-  <div>
-    <label>First name:
-      <input [(ngModel)]="person.firstName" type="text" placeholder="firstName"/>
-    </label>
+<button mat-raised-button (click)="onDelete(person)">Delete me</button>
 
-    <label>Last name:
-      <input [(ngModel)]="person.lastName" type="text" placeholder="lastName"/>
-    </label>
-
-    <label>Age
-      <input [(ngModel)]="person.age" type="number" placeholder="age"/>
-    </label>
-
-  </div>
 </div>
-

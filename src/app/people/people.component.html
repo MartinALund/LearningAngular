@@ -4,12 +4,11 @@
       [class.selected]="person === selectedPerson"
       (click)="onSelect(person)">
     <span class="badge">{{person.id}}</span> {{person.firstName}} - {{person.lastName}}
-    <button (click)="onDelete(person)">Delete me</button>
   </li>
 </ul>
 
 <app-person-detail [person]="selectedPerson"></app-person-detail>
 
-<button routerLink="createPerson">Opret ny person</button>
+<button routerLink="createPerson" [hidden]="selectedPerson">Opret ny person</button>
 
 

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
+  test: string[];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.test.push('hello');
+    this.test.push('test');
+    this.test.push('hello');
   }
 
 }
