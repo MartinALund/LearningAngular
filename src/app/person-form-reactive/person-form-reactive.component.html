@@ -5,17 +5,30 @@
     type="text" id="firstName"
     required minlength="4"
     formControlName="firstName">
-
   <label for="lastName">Last name</label>
   <input
     type="text"
     id="lastName"
     formControlName="lastName">
 
+  <div *ngIf="form.get('firstName').hasError('pattern')">
+    <p class="mat-error">First name cannot contain numbers</p>
+  </div>
+
+  <div *ngIf="form.get('firstName').hasError('required')">
+    <p class="mat-error">First name must be specified</p>
+  </div>
+
+  <div *ngIf="form.get('lastName').hasError('pattern')">
+    <p class="mat-error">Last name cannot contain numbers</p>
+  </div>
+
   <label for="age">Age</label>
   <input
     type="number"
     id="age"
     formControlName="age">
+
+
   <button type="submit" [disabled]="!form.valid">Gem</button>
 </form>
