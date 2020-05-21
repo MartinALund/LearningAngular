@@ -13,6 +13,8 @@ import { PersonFormReactiveComponent } from './person-form-reactive/person-form-
 import {PersonService} from './services/person.service';
 import { MatPlaygroundComponent } from './mat-playground/mat-playground.component';
 import { MatChipComponent } from './material-design/mat-chip/mat-chip.component';
+import { MatRadiobuttonComponent } from './material-design/mat-radiobutton/mat-radiobutton.component';
+import { MatSelectComponent } from './material-design/mat-select/mat-select.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatChipComponent } from './material-design/mat-chip/mat-chip.component'
     PersonDetailComponent,
     PersonFormReactiveComponent,
     MatPlaygroundComponent,
-    MatChipComponent
+    MatChipComponent,
+    MatRadiobuttonComponent,
+    MatSelectComponent
   ],
   imports: [
     BrowserModule,
