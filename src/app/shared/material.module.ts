@@ -19,6 +19,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatTabsModule} from '@angular/material/tabs';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -41,7 +44,10 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatProgressSpinnerModule,
     MatSortModule,
     MatNativeDateModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatChipsModule,
+    MatTabsModule,
+
   ],
   exports: [
     MatCardModule,
@@ -64,6 +70,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatSortModule,
     MatNativeDateModule,
     MatSnackBarModule,
+    MatChipsModule,
+    MatTabsModule,
   ],
 })
 export class MaterialModule { }

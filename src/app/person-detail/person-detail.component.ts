@@ -10,8 +10,8 @@ import {PersonService} from "../services/person.service";
 export class PersonDetailComponent implements OnInit {
 
   @Input() person: Person;
-  @Output() eventEmitter = new EventEmitter<boolean>();
-
+  @Output() test = new EventEmitter<boolean>();
+  didDelete = false;
 
   constructor(private personService: PersonService) { }
 
@@ -20,7 +20,8 @@ export class PersonDetailComponent implements OnInit {
 
   onDelete(person: Person): void {
     this.personService.deletePerson(person).subscribe(() => {
-      this.eventEmitter.emit(true);
+      this.test.emit(true);
+      this.didDelete = true;
     });
   }
 }

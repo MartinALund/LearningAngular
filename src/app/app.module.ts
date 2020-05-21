@@ -11,6 +11,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { PersonFormReactiveComponent } from './person-form-reactive/person-form-reactive.component';
 import {PersonService} from './services/person.service';
+import { MatPlaygroundComponent } from './mat-playground/mat-playground.component';
+import { MatChipComponent } from './material-design/mat-chip/mat-chip.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {PersonService} from './services/person.service';
     PeopleComponent,
     TodoComponent,
     PersonDetailComponent,
-    PersonFormReactiveComponent
+    PersonFormReactiveComponent,
+    MatPlaygroundComponent,
+    MatChipComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,7 @@ import {PersonService} from './services/person.service';
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [PersonService,
   ],

@@ -7,7 +7,7 @@
   </li>
 </ul>
 
-<app-person-detail [person]="selectedPerson"></app-person-detail>
+<app-person-detail [person]="selectedPerson" (test)="($event)"></app-person-detail>
 
 <button routerLink="createPerson" [hidden]="selectedPerson">Opret ny person</button>
 

@@ -32,6 +32,10 @@ export class PeopleComponent implements OnInit {
     }
   }
 
+  onDelete() {
+    console.log('test on delete event from people.component');
+  }
+
 
 
 
