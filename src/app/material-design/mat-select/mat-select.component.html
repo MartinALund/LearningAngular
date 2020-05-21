@@ -1,0 +1,8 @@
+<h1>Material select</h1>
+<mat-form-field>
+  <mat-label>Programming languages</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let programmingLanguage of programmingLanguages" [value]="programmingLanguage">{{programmingLanguage}}</mat-option>
+  </mat-select>
+</mat-form-field>
