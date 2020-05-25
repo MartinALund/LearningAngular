@@ -16,6 +16,7 @@ import { MatChipComponent } from './material-design/mat-chip/mat-chip.component'
 import { MatRadiobuttonComponent } from './material-design/mat-radiobutton/mat-radiobutton.component';
 import { MatSelectComponent } from './material-design/mat-select/mat-select.component';
 import { MatAutocompleteComponent } from './material-design/mat-autocomplete/mat-autocomplete.component';
+import { InputTestComponent } from './input-test/input-test.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatAutocompleteComponent } from './material-design/mat-autocomplete/mat
     MatChipComponent,
     MatRadiobuttonComponent,
     MatSelectComponent,
-    MatAutocompleteComponent
+    MatAutocompleteComponent,
+    InputTestComponent
   ],
   imports: [
     BrowserModule,
