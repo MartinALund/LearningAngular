@@ -17,6 +17,7 @@ import { MatRadiobuttonComponent } from './material-design/mat-radiobutton/mat-r
 import { MatSelectComponent } from './material-design/mat-select/mat-select.component';
 import { MatAutocompleteComponent } from './material-design/mat-autocomplete/mat-autocomplete.component';
 import { InputTestComponent } from './input-test/input-test.component';
+import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { InputTestComponent } from './input-test/input-test.component';
     MatRadiobuttonComponent,
     MatSelectComponent,
     MatAutocompleteComponent,
-    InputTestComponent
+    InputTestComponent,
+    NgDirectivesComponent
   ],
   imports: [
     BrowserModule,

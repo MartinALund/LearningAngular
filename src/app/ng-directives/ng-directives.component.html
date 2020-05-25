@@ -1,0 +1,13 @@
+<p>ng-directives works!</p>
+
+
+<div *ngIf="shouldBeDisplayed">
+  <p>I will be hidden</p>
+</div>
+
+<!-- Not visible in DOM. -->
+<ng-template [ngIf]="!shouldBeDisplayed">
+  <div>
+    <p>I will not be hidden</p>
+  </div>
+</ng-template>
