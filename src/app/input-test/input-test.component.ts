@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-input-test',
@@ -7,9 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class InputTestComponent implements OnInit {
   @Input() appTitle;
+  @Output() outputEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
+  }
+  public onEventTrigger() {
+    this.outputEvent.emit('Event triggered in input-test class,');
   }
 
 }

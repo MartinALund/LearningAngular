@@ -8,4 +8,4 @@
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>
 
-<app-input-test [appTitle]="title"></app-input-test>
+<app-input-test (outputEvent)="onEventTrigger($event)" [appTitle]="title"></app-input-test>

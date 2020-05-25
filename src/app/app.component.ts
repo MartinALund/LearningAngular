@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular playground';
+  public onEventTrigger(event) {
+    console.log(event + ' but is displayed in app.component');
+  }
 }
